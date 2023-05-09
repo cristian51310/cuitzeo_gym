@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="../../styles/payment.css">
+  <link rel="stylesheet" href="../../styles/buttons.css">
+  <title>Pago exitoso</title>
+</head>
+
+<body>
+  <main class="payment-success">
+    <div class="container">
+      <h1>Pago Exitoso</h1>
+      <div class="btn-primary btn">
+        <form method="POST" action="/pago-completado">
+          <input style="display: none;" type="text" value="<%=id_usuario%>">
+          <button type="submit">Ir al inicio y obtener rutina</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+main{
+  padding: 4.5em;
+  padding-top: 9.6em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.title{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 3;
+  color: black;
+  padding: 1.5em;
+  border-radius: 20px;
+}
+
+.title h1{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title p{
+  font-size: 20px;
+  font-weight: 300;
+  margin-right: 0.5em;
+}
+
+.routine_card{
+  border: solid;
+  border-color: white;
+  border-radius: 15px; 
+}
+
+.card_header{
+  background-color: #fff;
+  color: black;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+}
+
+.card_header h2{
+  font-size: 1.3em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card_body{
+  margin-bottom: 12px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.descanso{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+}
+
+thead {
+  text-align: center;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+th,
+td {
+  padding: 18px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+  main{
+    padding: 2.5em;
+    padding-top: 9.5em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title{
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main{
+    padding-top: 9.5em;
+    grid-template-columns: 1fr;
+  }
+
+  .title{
+    grid-column: span 1;
+  }
+}

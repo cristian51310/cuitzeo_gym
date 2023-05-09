@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="../../styles/login.css">
+  <link rel="stylesheet" href="../../styles/inputs.css">
+  <link rel="stylesheet" href="../../styles/buttons.css">
+  <title>Iniciar Sesion</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="signin-signup">
+
+      <form method="POST" action="/login" class="sign-in-form">
+        <h2 class="title">Iniciar Sesion</h2>
+
+        <div class="input-group">
+          <input required="" type="email" name="email" autocomplete="off" class="input">
+          <label class="user-label">Email</label>
+        </div>
+
+        <div class="input-group">
+          <input required="" type="password" name="password" autocomplete="off" class="input">
+          <label class="user-label">Password</label>
+        </div>
+
+        <div class="btn-primary btn">
+          <button>Iniciar Sesion</button>
+        </div>
+        <p class="account-text">No tienes una cuenta? <a href="" id="sign-up-btn2">Registrate</a></p>
+      </form>
+
+      <form method="POST" action="/register" class="sign-up-form">
+        <h2 class="title">Registrate</h2>
+
+        <div class="input-group">
+          <input required="" type="text" name="nombre" autocomplete="off" class="input">
+          <label class="user-label">Nombre</label>
+        </div>
+
+        <div class="input-group">
+          <input required="" type="text" name="apellidoPaterno" autocomplete="off" class="input">
+          <label class="user-label">Apellido Paterno</label>
+        </div>
+
+        <div class="input-group">
+          <input required="" type="text" name="apellidoMaterno" autocomplete="off" class="input">
+          <label class="user-label">Apellido Materno</label>
+        </div>
+
+        <div class="input-group">
+          <input required="" type="email" name="email" autocomplete="off" class="input">
+          <label class="user-label">Email</label>
+        </div>
+
+        <div class="input-group">
+          <input required="" type="password" name="password" autocomplete="off" class="input">
+          <label class="user-label">Password</label>
+        </div>
+
+        <div class="btn-primary btn">
+          <button type="submit">Registrate</button>
+        </div>
+
+        <p class="account-text">Ya tienes una cuenta <a href="#" id="sign-in-btn2">Inicia Sesion</a></p>
+      </form>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>Club de entrenamiento</h3>
+          <p>Ya eres parte de la familia?</p>
+          <div class="btn-primary btn">
+            <button id="sign-in-btn">Inicia Sesion</button>
+          </div>
+        </div>
+        <img src="signin.svg" alt="" class="image">
+      </div>
+
+      <div class="panel right-panel">
+        <div class="content">
+          <h3>Club de entrenamiento</h3>
+          <p>Quiers formar parte del mejor club de entrenamiento?</p>
+          <div class="btn-primary btn">
+            <button id="sign-up-btn">Registrate</button>
+          </div>
+        </div>
+        <img src="signup.svg" alt="" class="image">
+      </div>
+    </div>
+
+  </div>
+  <script>
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container");
+    const sign_in_btn2 = document.querySelector("#sign-in-btn2");
+    const sign_up_btn2 = document.querySelector("#sign-up-btn2");
+
+    sign_up_btn.addEventListener("click", () => {
+      container.classList.add("sign-up-mode");
+    });
+
+    sign_in_btn.addEventListener("click", () => {
+      container.classList.remove("sign-up-mode");
+    });
+
+    sign_up_btn2.addEventListener("click", () => {
+      container.classList.add("sign-up-mode2");
+    });
+    sign_in_btn2.addEventListener("click", () => {
+      container.classList.remove("sign-up-mode2");
+    });
+  </script>
+</body>
+
+</html>

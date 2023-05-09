@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niveles</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="../../styles/navbar.css">
+  <link rel="stylesheet" href="../../styles/landing.css">
+  <link rel="stylesheet" href="../../styles/tiers.css">
+</head>
+
+<body>
+  <%- include('../includes/navbar.ejs') %>
+    <h1 class="title">Elige el mejor plan para ti</h1>
+    <div style="color: black;" class="wrapper">
+      <div class="table basic">
+        <div class="head_tab">
+          <h2>Basico</h2>
+        </div>
+        <div class="aj_p">
+          <p>Ideal solution for beginners</p>
+        </div>
+        <div class="price-section">
+          <div class="price-area">
+            <div class="inner-area">
+              <span class="text">$</span>
+              <span class="price">150<span style="font-size:12px">/mo</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="package-name"></div>
+        <ul class="features">
+          <form method="POST" action="/create-checkout-session">  
+            <input style="display: none;" type="text" name="prod_id" value="prod_NpOmjcE7Xqbn6R">
+            <input style="display: none;" type="text" name="price_id" value="price_1N3jzMCCkGcV1au1YLaHZWw5">
+            <div class="btn"><button>Suscribirse</button></div>
+          </form>
+        </ul>
+      </div>
+
+      <div class="table premium">
+        <div class="head_tab">
+          <h2>Intermedio</h2>
+        </div>
+        <div class="aj_p">
+          <p>Perfect package for personal</p>
+        </div>
+        <div class="price-section">
+          <div class="price-area">
+            <div class="inner-area">
+              <span class="text">$</span>
+              <span class="price">300<span style="font-size:12px">/mo</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="package-name"></div>
+        <ul class="features">
+          <form method="POST" action="/create-checkout-session">
+            <input style="display: none;" type="text" name="prod_id" value="prod_NpOn9Qbi2MHPYw">
+            <input style="display: none;" type="text" name="price_id" value="price_1N3jzxCCkGcV1au1GDTIZO3Q">
+            <div class="btn"><button>Suscribirse</button></div>
+          </form>
+        </ul>
+      </div>
+
+      <div class="table ultimate">
+        <div class="head_tab">
+          <h2>Premium</h2>
+        </div>
+        <div class="aj_p">
+          <p>Perfect package for businesses</p>
+        </div>
+        <div class="price-section">
+          <div class="price-area">
+            <div class="inner-area">
+              <span class="text">$</span>
+              <span class="price">3000<span style="font-size:12px">/mo</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="package-name"></div>
+        <ul class="features">
+          <form method="POST" action="/create-checkout-session">
+            <input style="display: none;" type="text" name="prod_id" value="prod_NpOnf2p67kUiN1">
+            <input style="display: none;" type="text" name="price_id" value="price_1N3k0LCCkGcV1au1GIviptva">
+            <div class="btn"><button>Suscribirse</button></div>
+          </form>
+        </ul>
+      </div>
+
+    </div>
+</body>
+
+</html>

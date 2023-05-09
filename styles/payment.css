@@ -1,0 +1,30 @@
+body .payment-cancel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(0,0,0);
+  background: linear-gradient(24deg, rgba(0,0,0,1) 0%, rgba(117,0,0,1) 100%);
+}
+
+body .payment-success{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(0,0,0);
+  background: linear-gradient(24deg, rgba(0,0,0,1) 0%, rgba(1,88,28,1) 100%);
+}
+
+h1{
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

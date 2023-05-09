@@ -1,0 +1,14 @@
+body{
+  background-color: #1e1e1e;
+  background: rgb(0,0,0);
+  background: linear-gradient(25deg, rgba(0,0,0,1) 0%, rgba(82,1,70,1) 100%);
+min-height: 100vh;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}

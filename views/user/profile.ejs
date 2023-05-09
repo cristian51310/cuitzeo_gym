@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi perfil</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <link rel="stylesheet" href="../../styles/navbar.css">
+  <link rel="stylesheet" href="../../styles/profile.css">
+  <link rel="stylesheet" href="../../styles/inputs.css">
+  <link rel="stylesheet" href="../../styles/buttons.css">
+</head>
+
+<body>
+  <%- include('../includes/navbar.ejs') %>
+
+    <main>
+
+      <div class="title">
+        <p>Bienvenido, </p><h1> <%= name %></h1>
+      </div>
+
+      <div class="profile">
+        <img src="../../assets/profile-photo.jpg" alt="">
+      </div>
+
+      <div class="data">
+        <form method="POST" action="/guardar-perfil">
+
+          <div>
+            <label>Edad</label>
+            <div class="range_content">
+              <input name="edad" id="range-edad" min="16" max="50" type="range" value="16">
+              <div class="range_count">
+                <p id="circle-edad" style="margin: 0; font-size: 18px;">16</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label>Peso (kg)</label>
+            <div class="range_content">
+              <input name="peso" id="range-peso" min="50" max="120" type="range" value="50">
+              <div class="range_count">
+                <p id="circle-peso" style="margin: 0; font-size: 18px;">50</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label>Estatura (cm)</label>
+            <div class="range_content">
+              <input name="estatura" id="range-estatura" min="150" max="200" type="range" value="150">
+              <div class="range_count">
+                <p id="circle-estatura" style="margin: 0; font-size: 18px;">150</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label>Objetivo</label>
+            <div class="range_content">
+              <div class="input-group">
+                <select class="input" name="objetivo">
+                  <option value="1">Ganar masa muscular</option>
+                  <option value="2">Bajar de peso</option>
+                  <option value="3">Mantener mi peso</option>
+                  <option value="4">Mejorar la resistencia</option>
+                  <option value="5">Reducir el estres</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-primary btn">
+            <button type="submit">Guardar datos</button>
+          </div>
+
+        </form>
+      </div>
+
+
+    </main>
+    <script>
+      const rangeEdad = document.getElementById('range-edad');
+      const circleEdad = document.getElementById('circle-edad');
+
+      const rangePeso = document.getElementById('range-peso');
+      const circlePeso = document.getElementById('circle-peso');
+
+      const rangeEstatura = document.getElementById('range-estatura');
+      const circleEstatura = document.getElementById('circle-estatura');
+
+      rangeEdad.addEventListener('input', () => {
+        circleEdad.innerText = rangeEdad.value;
+      });
+
+      rangePeso.addEventListener('input', () => {
+        circlePeso.innerText = rangePeso.value;
+      });
+
+      rangeEstatura.addEventListener('input', () => {
+        circleEstatura.innerText = rangeEstatura.value;
+      });
+    </script>
+</body>
+
+</html>

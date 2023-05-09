@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../styles/main.css">
+  <link rel="stylesheet" href="../../../styles/inputs.css">
+  <link rel="stylesheet" href="../../../styles/buttons.css">
+  <link rel="stylesheet" href="../../../styles/sendemail.css">
+  <title>Enviar Email</title>
+</head>
+
+<body>
+  <div style="margin-bottom: 2em;">
+    <h2 style="margin-bottom: 0.5em;">Enviar correo a: </h2>
+    <% for(let usuario of usuarios) { %>
+      <p>
+        <%= usuario.email %>
+      </p>
+    <% } %>
+  </div>
+
+
+  <form method="POST" action="/enviar-email">
+
+    <input style="display: none;" name="email" type="text" value="<%=usuarios[0].email%>">
+
+    <div class="input-group">
+      <input required="" type="text" name="asunto" autocomplete="off" class="input">
+      <label class="user-label">Asunto</label>
+    </div>
+
+    <div class="input-group">
+      <textarea class="input" name="cuerpo" cols="30" rows="10"></textarea>
+      <label class="user-label">Cuerpo</label>
+    </div>
+
+    <div class="btn-primary btn">
+      <button type="submit">Enviar correo</button>
+    </div>
+  </form>
+</body>
+
+</html>

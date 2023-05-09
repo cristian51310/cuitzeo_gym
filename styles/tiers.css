@@ -1,0 +1,10 @@
+body{
+  display: flex; 
+  flex-direction: column; 
+  padding-top: 11em;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 40px;
+}
