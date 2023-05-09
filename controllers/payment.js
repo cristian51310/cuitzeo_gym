@@ -33,7 +33,7 @@ exports.postCheckoutSession = async (req, res, next) => {
 
 exports.getPaymentSuccess = (req, res, next) => {
   if (req.session.loggedin === true) {
-    const id_usuario = req.params.id_usuario
+    const id_usuario = req.session.id_usuario
     res.render('payments/success', {
       pageTitle: 'pagoExitoso',
       id_usuario
@@ -63,6 +63,7 @@ exports.getPaymentCancel = (req, res, next) => {
 
 exports.postUpdateSuscription = (req, res, next) => {
   const data = req.body
+  console.log(data)
   const id_usuario = data.id_usuario
 
   Usuario.actualizarSuscripcion(id_usuario)

@@ -1,6 +1,6 @@
 main{
   padding: 2.5em;
-  padding-top: 8.6em;
+  padding-top: 3.6em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px;
@@ -10,8 +10,10 @@ main{
   display: flex;
   height: 350px;
   border: solid;
-  border-color: white;
+  border-width: 1px;
+  border-color: rgb(183, 183, 183);
   border-radius: 17px; 
+  box-shadow: 20px 20px 70px 0px rgba(196, 38, 213, 0.5);
 }
 
 .image{
@@ -99,15 +101,15 @@ button{
 
   main{
     padding: 1.5em;
-    padding-top: 8.6em;
+    padding-top: 2.2em;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 30px;
   }
 
   .machine_card{
     flex-direction: column;
-    height: 600px;
+    height: 500px;
   }
 
   .image{

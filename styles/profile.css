@@ -1,6 +1,6 @@
 main{
   padding: 4.5em;
-  padding-top: 8.6em;
+  padding-top: 2.6em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 80px;
@@ -63,6 +63,10 @@ main img {
   width: 100%;
 }
 
+.view{
+  display: flex;
+}
+
 @media screen and (max-width: 1100px) {
   main{
     padding: 2.5em;
@@ -81,6 +85,19 @@ main img {
   main{
     display: flex;
     flex-direction: column;
+    padding: 1.5em;
     padding-top: 8.5em;
+    gap: 50px;
+  }
+
+  .data form{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  main img {
+    border-radius: 50%;
+    width: 60%;
   }
 }

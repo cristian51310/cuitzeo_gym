@@ -1,6 +1,6 @@
 main{
   padding: 4.5em;
-  padding-top: 9.6em;
+  padding-top: 2.6em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
@@ -29,9 +29,17 @@ main{
 }
 
 .routine_card{
-  border: solid;
   border-color: white;
   border-radius: 15px; 
+  background-color: #fff;
+  box-shadow: 20px 20px 70px 0px rgba(196, 38, 213, 0.5);
+}
+
+.routine_card_descanso{
+  border-color: white;
+  border-radius: 15px; 
+  background-color: #d8d8d8;
+  box-shadow: 20px 20px 70px 0px rgba(196, 38, 213, 0.5);
 }
 
 .card_header{
@@ -51,6 +59,7 @@ main{
 
 .card_body{
   margin-bottom: 12px;
+  color: #000;
 }
 
 table {
@@ -61,15 +70,35 @@ table {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
+  gap: 14px;
   justify-content: center;
   align-items: center;
   padding: 3em;
 }
 
-thead {
+.descanso h4{
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.descanso img{
+  width: 100%;
+}
+
+thead tr {
   text-align: center;
   background-color: #333;
+  color: #fff;
   border-radius: 10px;
+}
+
+tr{
+  background: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #d8d8d8; 
 }
 
 th,
@@ -81,7 +110,7 @@ td {
 @media screen and (max-width: 1100px) {
   main{
     padding: 2.5em;
-    padding-top: 9.5em;
+    padding-top: 2.5em;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -92,8 +121,10 @@ td {
 
 @media screen and (max-width: 550px) {
   main{
-    padding-top: 9.5em;
+    padding: 1.5em;
+    padding-top: 8.5em;
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .title{

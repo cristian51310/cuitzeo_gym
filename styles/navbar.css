@@ -5,10 +5,10 @@
 }
 
 .container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  left: 20px;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  left: 0px;
 }
 
 .header {
@@ -19,7 +19,6 @@
   align-items: center;
   height: 85px;
   padding: 5px 55px;
-  border-radius: 15px;
 }
 
 .header .btn button,
@@ -40,7 +39,6 @@
 }
 
 .header .btn button:hover,
-/**/
 .header .menu button:hover {
   background-color: #e2f1f8;
   color: #ffbc0e;
@@ -99,6 +97,10 @@
   .nav-links,
   .btn {
     display: none;
+  }
+
+  .btn-primary {
+    display: block;
   }
 
   .menu {

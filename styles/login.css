@@ -17,7 +17,8 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: #131313;
+  background: rgb(0,0,0);
+  background: linear-gradient(25deg, rgba(0,0,0,1) 0%, rgba(82,1,70,1) 100%);
   border-radius: 15px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -116,7 +117,7 @@ a {
 }
 
 .panel h3 {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
 }
 
@@ -124,6 +125,8 @@ a {
   font-size: 18px;
   line-height: 24px;
   padding: 10px 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .image {
@@ -178,6 +181,26 @@ a {
   pointer-events: all;
 }
 
+.mobile-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.mobile-title h3{
+  color: #fff;
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mobile-title img{
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+}
 
 /*Responsive*/
 
@@ -193,7 +216,7 @@ a {
       display: none;
   }
   form {
-      width: 80%;
+      width: 94%;
   }
   form.sign-up-form {
       display: none;
