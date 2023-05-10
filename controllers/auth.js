@@ -32,7 +32,6 @@ exports.postLogin = (req, res, next) => {
         } else {
           // todo correcto
           // verificamos si el usuario es admin o no
-          console.log('todo correcto')
           req.session.loggedin = true
           req.session.name = filas[0].nombre
           req.session.id_usuario = filas[0].id_usuario

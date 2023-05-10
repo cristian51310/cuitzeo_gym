@@ -1,7 +1,10 @@
-body{
+main{
   display: flex; 
   flex-direction: column; 
-  padding-top: 11em;
+  padding-top: 7em;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
 }
 
 .title{
@@ -9,14 +12,26 @@ body{
   font-size: 40px;
 }
 
-@media (max-width:400px) {
-  body{
-    padding-top: 9em;
+@media (max-width:756px) {
+  main{
+    padding: 1.5em;
+    padding-top: 3em;
     padding-bottom: 3em;
   }
   .title{
     font-size: 30px;
-    margin-bottom: 1em;
+    text-align: center;
+  }
+}
+
+@media (max-width:500px) {
+  main{
+    padding: 1.5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .title{
+    font-size: 30px;
     text-align: center;
   }
 }
