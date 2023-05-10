@@ -52,7 +52,7 @@ exports.postEnviarEmail = async (req, res, next) => {
   const transporter = nodemailer.createTransport({
     host: 'smtp-mail.outlook.com', // hostname
     service: 'outlook', // service name
-    secureConnection: false,
+    secureConnection: true,
     tls: {
       ciphers: 'SSLv3',
       rejectUnauthorized: false
