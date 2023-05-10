@@ -10,13 +10,18 @@ exports.getLogin = (req, res, next) => {
   res.render('auth/login')
 }
 
-// Funcion para validar el inicio de sesion
-// 1.- pedimos los datos del formulario de login
-// 2.- buscamos los usuarios conforme al email ingresado
-// 3.- si no se encontro el usuario no hacemos nada
-// 4.- si se encontro comparamos las contraseñas
-// 5.- si las contraseñas no coinciden no iniciamos sesion
-// 6.- si las contraseñas coinciden iniciamos una session
+/****************************************************************/
+/*    Validar el inicio de sesion con los datos que se envian   */
+/****************************************************************/
+/****************************************************************/
+/* 1.- pedimos los datos del formulario de login                */
+/* 2.- buscamos los usuarios conforme al email ingresado        */
+/* 3.- si no se encontro el usuario no hacemos nada             */
+/* 4.- si se encontro comparamos las contraseñas                */
+/* 5.- si las contraseñas no coinciden no iniciamos sesion      */
+/* 6.- si las contraseñas coinciden iniciamos una session       */
+/****************************************************************/
+
 exports.postLogin = (req, res, next) => {
   const data = req.body
 
@@ -49,20 +54,30 @@ exports.postLogin = (req, res, next) => {
   })
 }
 
-// Funcion para cerrar sesion
-// 1.- destruimos la sesion
-// 2.- redireccionamos a la pagina de login
+/****************************************************************/
+/*                  Funcion para cerrar la sesion               */
+/****************************************************************/
+/****************************************************************/
+/* 1.- destruimos la sesion                                     */
+/* 2.- redireccionamos a la pagina de login                     */
+/****************************************************************/
+
 exports.logout = (req, res) => {
   req.session.destroy()
   res.redirect('/login')
   console.log('Sesion cerrada exitosamente')
 }
 
-// Funcion para crear usuarios
-// 1.- pedimos los datos del formulario de registro
-// 2.- encriptamos la contraseña
-// 3.- guardamos los datos en la BD
-// 4.- redireccionamos a la pagina de login
+/****************************************************************/
+/*                  Funcion para crear usuarios                 */
+/****************************************************************/
+/****************************************************************/
+/* 1.- pedimos los datos del formulario de registro             */
+/* 2.- encriptamos la contraseña                                */
+/* 3.- guardamos los datos en la BD                             */
+/* 4.- redireccionamos a la pagina de login                     */
+/****************************************************************/
+
 exports.postRegister = (req, res, next) => {
   const data = req.body
   bcrypt.hash(data.password, 12).then(hash => {

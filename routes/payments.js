@@ -6,6 +6,7 @@ const paymentsController = require('../controllers/payment.js')
 router.get('/payment/success', paymentsController.getPaymentSuccess)
 router.get('/payment/cancel', paymentsController.getPaymentCancel)
 
+// rutas de tipo POST
 router.post('/create-checkout-session', paymentsController.postCheckoutSession)
 router.post('/pago-completado', paymentsController.postUpdateSuscription)
 

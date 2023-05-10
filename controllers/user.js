@@ -18,9 +18,6 @@ pero primero siempre se haran una serie de validaciones
   para que pueda crear uno
 */
 
-// se que posiblemente haya una mejor manera de hacer todo esto pero por el momento
-// solo copiare y pegare el codigo por cada funcion de tipo get
-
 /****************************************************************/
 /*                   Obtener pagina de rutinas                  */
 /****************************************************************/

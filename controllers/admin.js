@@ -18,6 +18,10 @@ exports.getDashboard = (req, res, next) => {
   }
 }
 
+/****************************************************************/
+/*           Obtener el correo del usuario por el id            */
+/****************************************************************/
+
 exports.getCorreoUsuario = (req, res, next) => {
   if (req.session.loggedin === true) {
     const id_usuario = req.params.id_usuario
@@ -31,6 +35,14 @@ exports.getCorreoUsuario = (req, res, next) => {
     res.redirect('/login')
   }
 }
+
+/****************************************************************/
+/*          Funcion para enviar correos a los usuarios          */
+/****************************************************************/
+/****************************************************************/
+/* 1.- recuperamos los datos del formulario de envio            */
+/* 2.- utilizamos la libreria nodemailer para enviar el correo  */
+/****************************************************************/
 
 exports.postEnviarEmail = async (req, res, next) => {
   const email = req.body.email

@@ -6,6 +6,7 @@ const adminController = require('../controllers/admin.js')
 router.get('/admin/dashboard', adminController.getDashboard)
 router.get('/admin/dashboard/send/:id_usuario', adminController.getCorreoUsuario)
 
+// rutas de tipo POST
 router.post('/enviar-email', adminController.postEnviarEmail)
 
 module.exports = router
