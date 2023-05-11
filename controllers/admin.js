@@ -1,5 +1,5 @@
+/* eslint-disable n/handle-callback-err */
 /* eslint-disable camelcase */
-const nodemailer = require('nodemailer')
 const Usuario = require('../models/usuarios')
 
 /****************************************************************/
@@ -49,26 +49,27 @@ exports.postEnviarEmail = async (req, res, next) => {
   const asunto = req.body.asunto
   const cuerpo = req.body.cuerpo
 
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.office365.com',
-    port: 587,
-    secure: false,
-    auth: {
-      user: 'cristiancrfe@outlook.com',
-      pass: 'mi_nombre'
-    }
+  const MAILGUN_DOMAIN = 'sandboxd9301b5bff6945be948cb055f6703fb0.mailgun.org'
+  const MAILGUN_API = '3e1cc322bb54682227eb5aac1fee1fa3-6b161b0a-9e4738de'
+
+  const mailgun = require('mailgun-js')({
+    apiKey: MAILGUN_API,
+    domain: MAILGUN_DOMAIN
   })
 
-  const mailOptions = {
-    from: 'cristiancrfe@outlook.com',
+  const data = {
+    from: 'Remitente <cristian.figueroa.crfe@gmail.com>',
     to: email,
     subject: asunto,
-    text: cuerpo
+    html: cuerpo
   }
 
-  const info = await transporter.sendMail(mailOptions)
-
-  console.log(info)
-
-  res.redirect('/admin/dashboard')
+  mailgun.messages().send(data, (error, body) => {
+    if (error) {
+      console.log(error)
+      res.redirect('/admin/dashboard')
+    } else {
+      res.redirect('/admin/dashboard')
+    }
+  })
 }

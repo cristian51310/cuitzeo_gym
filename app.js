@@ -3,6 +3,7 @@
 const express = require('express')
 const session = require('express-session')
 const path = require('path')
+const cors = require('cors')
 
 const routesAuth = require('./routes/auth.js')
 const routesUser = require('./routes/user.js')
@@ -23,6 +24,8 @@ app.use(session({
     httpOnly: true
   }
 }))
+
+app.use(cors())
 
 // Indicarle al servidor donde se encuentran archivos que se van a usar
 app.use('/assets', express.static(path.join(__dirname, './assets')))
