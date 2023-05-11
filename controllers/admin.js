@@ -64,6 +64,8 @@ exports.postEnviarEmail = async (req, res, next) => {
     html: cuerpo
   }
 
+  console.log(data)
+
   mailgun.messages().send(data, (error, body) => {
     res.redirect('/admin/dashboard')
   })
