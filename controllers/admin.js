@@ -65,11 +65,6 @@ exports.postEnviarEmail = async (req, res, next) => {
   }
 
   mailgun.messages().send(data, (error, body) => {
-    if (error) {
-      console.log(error)
-      res.redirect('/admin/dashboard')
-    } else {
-      res.redirect('/admin/dashboard')
-    }
+    res.redirect('/admin/dashboard')
   })
 }
