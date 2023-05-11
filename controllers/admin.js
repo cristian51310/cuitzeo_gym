@@ -50,12 +50,9 @@ exports.postEnviarEmail = async (req, res, next) => {
   const cuerpo = req.body.cuerpo
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp-mail.outlook.com', // hostname
-    secure: true,
-    tls: {
-      ciphers: 'SSLv3'
-    },
-    port: 465,
+    host: 'smtp.office365.com',
+    port: 587,
+    secure: false,
     auth: {
       user: 'cristiancrfe@outlook.com',
       pass: 'mi_nombre'
