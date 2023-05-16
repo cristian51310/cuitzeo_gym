@@ -49,8 +49,8 @@ exports.postEnviarEmail = async (req, res, next) => {
   const asunto = req.body.asunto
   const cuerpo = req.body.cuerpo
 
-  const MAILGUN_DOMAIN = 'sandboxd9301b5bff6945be948cb055f6703fb0.mailgun.org'
-  const MAILGUN_API = '3e1cc322bb54682227eb5aac1fee1fa3-6b161b0a-9e4738de'
+  const MAILGUN_DOMAIN = 'sandboxed8a40b80e9c494fb8fd008b60be6db8.mailgun.org'
+  const MAILGUN_API = '53c62d052fd1907eda7be54c2098f71a-db4df449-5a89278d'
 
   const mailgun = require('mailgun-js')({
     apiKey: MAILGUN_API,
@@ -58,7 +58,7 @@ exports.postEnviarEmail = async (req, res, next) => {
   })
 
   const data = {
-    from: 'Remitente <cristian.figueroa.crfe@gmail.com>',
+    from: 'Remitente <avilesalexa003@gmail.com>',
     to: email,
     subject: asunto,
     html: cuerpo
